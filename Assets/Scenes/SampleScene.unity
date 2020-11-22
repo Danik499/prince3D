@@ -18183,23 +18183,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1290129942}
   m_Mesh: {fileID: 4300000, guid: 657987f19f0767d4f81541198f8e3eff, type: 3}
---- !u!1 &1298816058 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5303234598347287456, guid: e167b0e560886c14c898c46b1b812474, type: 3}
-  m_PrefabInstance: {fileID: 1340647962}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1298816064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1298816058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c1982ebfc89c5842b8da3e0d0c9e485, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1299159203
 GameObject:
   m_ObjectHideFlags: 0
@@ -18899,10 +18882,6 @@ PrefabInstance:
     - target: {fileID: 5303234598347287468, guid: e167b0e560886c14c898c46b1b812474, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5303234598347287469, guid: e167b0e560886c14c898c46b1b812474, type: 3}
-      propertyPath: groundMask.m_Bits
-      value: 256
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e167b0e560886c14c898c46b1b812474, type: 3}
