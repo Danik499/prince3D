@@ -14,6 +14,12 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 _velocity;
     private bool _isGrounded;
     private float _increaseSpeed;
+	
+	private Animator anim;
+
+	void Start() {
+		anim = transform.Find("Skin").GetComponent<Animator>();
+	}
 
     private void Update()
     {
@@ -25,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
         
         var x = Input.GetAxis("Horizontal");
         var z = Input.GetAxis("Vertical");
+		anim.SetFloat("Speed", speed * 50 * (Mathf.Abs(x)+Mathf.Abs(z) > 1 ? 1 : Mathf.Abs(x)+Mathf.Abs(z)));
         _increaseSpeed = 0;
         if (Input.GetKey(KeyCode.LeftShift))
         {
