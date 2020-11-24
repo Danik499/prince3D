@@ -7,6 +7,7 @@ TagManager:
   - Thorns
   - Door
   - Princess
+  - Shield
   layers:
   - Default
   - TransparentFX
