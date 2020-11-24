@@ -39,4 +39,11 @@ public class GameEvents : MonoBehaviour
         }
     }
 
+    public event Action getShield;
+    public void GetShield(){
+        if(getShield != null){
+            getShield();
+        }
+    }
+
 }
