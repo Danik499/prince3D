@@ -3,9 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 public class PlayerFeature : MonoBehaviour
 {
+    public GameObject go;
+    private SkinnedMeshRenderer smr;
     public bool activatedShield = false;
     public int usingShields = 0;
 
+    void Start()
+    {
+        smr = go.GetComponent<SkinnedMeshRenderer>();    
+    }
     //Death by thorns
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.CompareTag("Thorns")){
@@ -27,6 +33,7 @@ public class PlayerFeature : MonoBehaviour
             activatedShield = true;
             usingShields++;
             StartCoroutine(Waiter());
+            StartCoroutine(Blinking());
         }
     }
     
@@ -37,6 +44,15 @@ public class PlayerFeature : MonoBehaviour
             yield return new WaitForSeconds(10f);
         }  
         activatedShield = false;
-        Debug.Log("deactivated");
+    }
+
+    IEnumerator Blinking ()
+    {
+        while (activatedShield)
+        {
+            smr.enabled = !smr.enabled;
+            yield return new WaitForSeconds(0.2f);
+        }
+        smr.enabled = true;
     }
 }
